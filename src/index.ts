@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import { connectDb } from "./database/database";
 import foodCategoryRouter from "./router/foodCategory.router";
 import foodRouter from "./router/food.router";
+import foodOrderRouter from "./router/foodOrder.router";
 
 
 const app = express()
@@ -14,7 +15,7 @@ res.send("hello world")
 
 app.use("/", foodCategoryRouter)
 app.use("/food", foodRouter)
-
+app.use("/order", foodOrderRouter)
 
 
 

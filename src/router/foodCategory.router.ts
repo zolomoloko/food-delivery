@@ -12,6 +12,6 @@ foodCategoryRouter.get("/getCategories", getCategories)
 
 foodCategoryRouter.delete("/deleteCategory/:id", deleteCategory)
 
-foodCategoryRouter.put("/:id", putCategory)
+foodCategoryRouter.put("/putCategory/:id", putCategory)
 
 export default foodCategoryRouter;

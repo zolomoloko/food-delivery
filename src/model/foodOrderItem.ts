@@ -1,8 +1,13 @@
 import { model, Schema } from "mongoose";
+import { FoodSchemaType } from "./food";
 
-const foodOrderItemSchema = new Schema({
+export type FoodOrderItemType = {
+    food: FoodSchemaType;
+    quantity: number;
+};
+
+export const foodOrderItemSchema = new Schema<FoodOrderItemType>({
     food: { type: Schema.Types.ObjectId, ref: "Food", required: true},
-    quantity: { type: Number, default: true},
-});
-const FoodOrderItem = model ("FoodOrderItem", foodOrderItemSchema);
-export default FoodOrderItem;
+    quantity: { type: Number, required: true},
+},
+{_id: false});
