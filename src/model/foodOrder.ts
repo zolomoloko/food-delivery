@@ -5,12 +5,12 @@ import { User } from "./user";
 enum FoodOrderStatusEnum {
   PENDING = "PENDING",
   CANCELED = "CANCELED",
-  DELIVERED = " DELIVERED",
+  DELIVERED = "DELIVERED",
 }
 const foodOrderSchema = new Schema(
 {
   user: {type: Schema.Types.ObjectId, ref: "User", required: true},
-  totalPrice: { type: Number, required: true },
+  totalPrice: { type: Number, require: true },
   foodOrderItems: [{ type: foodOrderItemSchema, required: true }],
   status: {
     type: String,

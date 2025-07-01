@@ -3,13 +3,12 @@ import { FoodOrder } from "../../model/foodOrder";
 
 
 export const createFoodOrder = async (req: Request, res: Response) => {
-  const { user, foodOrderItems, totalPrice, status } = req.body;
+  const { user, foodOrderItems, totalPrice} = req.body;
   try {
     const foodOrder= await new FoodOrder({
       user,
       foodOrderItems,
       totalPrice,
-      status,
     }).save();
 
     res.status(200).send({ success: true, foodOrder });

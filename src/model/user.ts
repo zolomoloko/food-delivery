@@ -12,11 +12,11 @@ const userSchema = new Schema({
   role: {
     type: String,
     require: true,
-    default: UserRoleEnum.ADMIN,
+    default: UserRoleEnum.USER,
     enum: Object.values(UserRoleEnum),
   },
-  isVerified: { type: Boolean, required: true },
+  isVerified: { type: Boolean, require: true },
   cleatedAt: { type: Date, default: Date.now() },
   updatedAt: { type: Date, default: Date.now() },
 });
-export const  User = model("User", userSchema);
+export const User = model("User", userSchema);

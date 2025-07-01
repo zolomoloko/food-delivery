@@ -11,6 +11,6 @@ foodOrderRouter.get("/getFoodOrder", getOrder);
 
 foodOrderRouter.get("/getByIdFoodOrder/:orderId", getByIdOrder);
 
-foodOrderRouter.put("/putOrder/:orderId", putOrder);
+foodOrderRouter.put("/:orderId", putOrder);
 
 export default foodOrderRouter;
