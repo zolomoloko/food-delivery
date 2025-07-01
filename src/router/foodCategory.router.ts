@@ -6,9 +6,9 @@ import { putCategory } from "../controller/foodCategory/put-category.controller"
 
 const foodCategoryRouter = express.Router();
 
-foodCategoryRouter.post("/createCategory", createFoodCategory);
+foodCategoryRouter.post("/", createFoodCategory);
 
-foodCategoryRouter.get("/getCategories", getCategories)
+foodCategoryRouter.get("/", getCategories)
 
 foodCategoryRouter.delete("/deleteCategory/:id", deleteCategory)
 

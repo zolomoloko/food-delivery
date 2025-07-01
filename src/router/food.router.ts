@@ -9,6 +9,8 @@ foodRouter.post("/createFood", createFood)
 
 foodRouter.get("/getFood/:foodId", getFood)
 
+foodRouter.get("/getFoodsWithCategories", )
+
 foodRouter.delete("/deleteFood/:foodId", deleteFood)
 
 foodRouter.put("/putFood/:foodId", putFood)
