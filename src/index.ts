@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import cors from "cors";
+import cors from "cors"
 import { connectDb } from "./database/database";
 import foodCategoryRouter from "./router/foodCategory.router";
 import foodRouter from "./router/food.router";
@@ -7,7 +7,7 @@ import foodOrderRouter from "./router/foodOrder.router";
 import userRouter from "./router/user.router";
 
 const app = express();
-const port = 4200;
+const port = 3002;
 app.use(express.json());
 app.use(cors());
 
