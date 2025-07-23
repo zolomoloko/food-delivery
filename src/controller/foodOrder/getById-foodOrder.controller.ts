@@ -2,9 +2,9 @@ import { FoodOrder } from "../../model/foodOrder";
 import { Request, Response } from "express";
 
 export const getByIdOrder = async (req: Request, res: Response) => {
-  const { orderId } = req.params;
+  const { userId } = req.params;
   try {
-    const foodOrder = await FoodOrder.findById(orderId).populate({
+    const foodOrder = await FoodOrder.find({user:userId}).populate({
       path: "foodOrderItems",
       populate: {
         path: "food",
