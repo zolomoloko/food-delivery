@@ -2,7 +2,7 @@ import { model, Schema } from "mongoose";
 
 export type FoodSchemaType = {
   foodName: string;
-  price: string;
+  price: number;
   image: string;
   ingredients: string;
   category: Schema.Types.ObjectId;
@@ -11,7 +11,7 @@ export type FoodSchemaType = {
 const foodSchema = new Schema<FoodSchemaType>(
   {
     foodName: { type: String, required: true },
-    price: { type: String, required: true },
+    price: { type: Number, required: true },
     image: { type: String, required: true },
     ingredients: { type: String, required: true },
     category: {

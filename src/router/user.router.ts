@@ -1,10 +1,10 @@
 import  express  from "express";
-import { createUser } from "../controller/Authentication/createUser.controller";
+import { addUser } from "../controller/Authentication/addUser.controller";
 import { getByIdUser } from "../controller/Authentication/getById-User.controller";
 
 const userRouter = express.Router();
 
-userRouter.post("/", createUser)
+userRouter.post("/", addUser)
 
 userRouter.get("/:userId", getByIdUser)
 

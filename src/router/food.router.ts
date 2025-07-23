@@ -14,6 +14,6 @@ foodRouter.get("/getFoodsWithCategories", foodsWithCategories);
 
 foodRouter.delete("/deleteFood/:foodId", deleteFood);
 
-foodRouter.put("/putFood/:foodId", putFood);
+foodRouter.put("/:foodId", putFood);
 
 export default foodRouter;
