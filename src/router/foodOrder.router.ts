@@ -9,7 +9,7 @@ foodOrderRouter.post("/createFoodOrder", createFoodOrder);
 
 foodOrderRouter.get("/getFoodOrder", getOrder);
 
-foodOrderRouter.get("/getByIdFoodOrder/:orderId", getByIdOrder);
+foodOrderRouter.get("/getByIdFoodOrder/:userId", getByIdOrder);
 
 foodOrderRouter.put("/:orderId", putOrder);
 
